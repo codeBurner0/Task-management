@@ -28,3 +28,27 @@
     background-color: black;
     border-radius: 5px;
   }
+
+  input{
+    border: none;
+    outline: none;
+    background-color: rgba(162, 167, 154, 0.791);
+    width: 400px;
+    padding:0.5rem;
+    border-bottom: 3px solid #2c5245;
+    border-radius: 5px;
+  font-family: 'Concert One', cursive;
+  }
+  input:focus-visible {
+    outline: 2px solid #2c5245;
+    border-radius: 3px;
+  }
+  
+  .add{
+    background-color: #2c5245;
+    font-family: 'Concert One', cursive;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px ;
+  }

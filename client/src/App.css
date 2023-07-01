@@ -1,7 +1,24 @@
 .cards{
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: 300px 300px 300px ;
   column-gap: 50px;
   row-gap: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
