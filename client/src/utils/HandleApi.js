@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "https://taskmanagement11.onrender.com";
+const baseUrl = "http://localhost:7000";
 
 const getAllTodo = (setTodo) => {
   axios
@@ -13,12 +13,13 @@ const getAllTodo = (setTodo) => {
     });
 };
 
-const addTodo = (text, description, setDescription, setText, setTodo) => {
+const addTodo = (text, description,image,setImage, setDescription, setText, setTodo) => {
   axios
-    .post(`${baseUrl}/save`, { text: text, description: description })
+    .post(`${baseUrl}/save`, { text: text, description: description,image:image })
     .then((data) => {
       console.log(data);
       setDescription("");
+      setImage("");
       setText("");
       getAllTodo(setTodo);
     })

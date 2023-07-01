@@ -10,9 +10,10 @@ const app=express();
 
 app.use(express.json())
 app.use(cors())
+
 mongoose.connect(process.env.MONGODB_URL).then(()=>{console.log("connected to mongodb..")}).catch((err)=>{
     console.log(err.message)
 })
 app.use(router)
 
-app.listen(PORT,()=>{console.log("server started")})
+app.listen(PORT,()=>{console.log("server started")});
