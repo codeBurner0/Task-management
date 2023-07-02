@@ -1,27 +1,33 @@
 import React, { useState } from "react";
-import { BiEdit } from "react-icons/bi";
-import { AiFillDelete } from "react-icons/ai";
-import './Card.css'
-function Card({ text, description,image, updateMode, deleteTodo }) {
-  const [line, setLine] = useState(false);
-  function changer() {
-    setLine(!line);
-  }
+import "./Card.css";
+import { Link } from "react-router-dom";
+function Card({ _id, text, description, image, deleteTodo }) {
+  const isUpdating = true;
   return (
     <div className="card">
-      <img className="image" src={image} alt="" style={{width:"280px"}}/>
-      <h1>{text}</h1>
-          <h3>{description}</h3>
-          <div>
-          <div className='create-blog'>Update Blog</div>
-          <div className='create-blog'>Delete Blog</div>
-          </div>
-            <div className="icons">
-              <BiEdit className="icon" onClick={updateMode} />
-              <AiFillDelete className="icon" onClick={deleteTodo} />
-            </div>
-          </div>
+      <img className="image" src={image} alt="" />
+      <h1 className="text">{text.substring(0,1).toUpperCase()+text.substring(1,15)+"..."}</h1>
+      <div className="over"><h3>{description.substring(0,130)+" ..."}<span className="read">Read</span></h3></div>
+      <div>
+        <div className="create-blog">
+          <Link
+            to={`/AddBlog`}
+            state={{
+              isUpdating: `${isUpdating}`,
+              _id: `${_id}`,
+              text: `${text}`,
+              description: `${description}`,
+              image: `${image}`,
+            }}
+          >
+            Update Blog
+          </Link>
+        </div>
+        <div className="create-blog" onClick={deleteTodo}>
+          Delete Blog
+        </div>
+      </div>
+    </div>
   );
 }
-
 export default Card;

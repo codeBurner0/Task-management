@@ -9,6 +9,10 @@ header{
     padding:20px;
     padding-left: 30px;
 }
+.app-name a{
+    font-weight: 800;
+    font-size:27px;
+}
 .create-blog{
     height: 5%;
     margin: 15px;
@@ -19,4 +23,7 @@ header{
     padding: 10px;
     text-align: center;
     font-weight: 600;
+}
+.create-blog a{
+    padding: 5px;
 }

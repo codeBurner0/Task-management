@@ -1,14 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.background{
+  background-image: url('./images/shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
 .cards{
-  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-evenly;
   display: grid;
   grid-template-columns: 300px 300px 300px ;
-  column-gap: 50px;
-  row-gap: 50px;
+  row-gap: 100px;
+}
+.margin{
+  margin-top: 6%;
+}
+.padding{
+  padding-top: 6%;
+}
+a{
+  text-decoration: none;
+  color: white;
 }
 
 
-
-
+@media screen and (max-width:1093px) {
+  .cards{
+  display: grid;
+  grid-template-columns: 300px 300px  ;
+  }
+}
+@media screen and (max-width:760px) {
+  .cards{
+  display: grid;
+  grid-template-columns: 300px  ;
+  }
+}
 
 
 

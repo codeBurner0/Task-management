@@ -35,18 +35,22 @@ const updateTodo = (
   setDescription,
   setText,
   setTodo,
-  setIsUpdating
+  setIsUpdating,
+  image,
+  setImage
 ) => {
   axios
     .post(`${baseUrl}/update`, {
       _id: todoId,
       text: text,
       description: description,
+      image:image
     })
     .then((data) => {
       console.log(data);
       setText("");
       setDescription("");
+      setImage("");
       setIsUpdating(false);
       getAllTodo(setTodo);
     })

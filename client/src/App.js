@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from './Components/Header'
 import Card from './Components/Card'
 import "./App.css";
 import { getAllTodo, addTodo, updateTodo, deleteTodo } from "./utils/HandleApi";
-import AddBlog from "./Components/AddBlog";
 function App() {
   const [todo, setTodo] = useState([]);
   const [text, setText] = useState("");
@@ -15,7 +13,6 @@ function App() {
   useEffect(() => {
     getAllTodo(setTodo);
   }, []);
-
   const updateMode = (_id, text, descript) => {
     setIsUpdating(true);
     setDescription(descript);
@@ -24,11 +21,10 @@ function App() {
   };
 
   return (
-      <div>
-        <Header/>
-        <AddBlog/>
+    
+      <div className="background" >
+        <div className="padding"></div>
           <div
-            className="add"
             onClick={
               isUpdating
                 ? () =>
@@ -45,13 +41,13 @@ function App() {
                     addTodo(text, description,image,setImage, setDescription, setText, setTodo)
             }
           >
-            {isUpdating ? "Update" : "Add"}
           </div>
         
         <div className='cards'>
           {todo.map((item) => (
             <Card
               key={item._id}
+              _id={item._id}
               text={item.text}
               description={item.description}
               image={item.image}
@@ -62,6 +58,7 @@ function App() {
             />
           ))}
         </div>
+        <div className="padding"></div>
       </div>
   );
 }
