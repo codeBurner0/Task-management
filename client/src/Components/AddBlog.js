@@ -1,6 +1,6 @@
 import './AddBlog.css'
 import React ,{ useEffect, useState } from 'react'
-import { getAllTodo, addTodo, updateTodo, deleteTodo } from "../utils/HandleApi";
+import { getAllTodo, addTodo, updateTodo } from "../utils/HandleApi";
 import {useLocation} from 'react-router-dom'
 export default function AddBlog() {
 
@@ -24,6 +24,7 @@ export default function AddBlog() {
     setImage(image);
     setIsUpdating(isUpdating)
   };
+
   const [todo, setTodo] = useState([]);
   const [text, setText] = useState("");
   const [image, setImage] = useState("");

@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "http://localhost:7000";
+const baseUrl = "http://localhost:9000";
 
 const getAllTodo = (setTodo) => {
   axios

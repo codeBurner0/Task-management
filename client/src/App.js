@@ -21,7 +21,6 @@ function App() {
   };
 
   return (
-    
       <div className="background" >
         <div className="padding"></div>
           <div
@@ -58,7 +57,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="padding"></div>
+         <div className="padding"></div>
       </div>
   );
 }
